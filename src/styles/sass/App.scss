@@ -1,0 +1,209 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  .sidebar {
+    position: fixed;
+    z-index: 1;
+    min-width: 20%;
+    max-width: 200px;
+    height: 100%;
+    border-right: 1px solid #cecece;
+    background-color: #fff;
+    padding: 0 25px 30px 25px;
+    h4 {
+      padding: 50px 0;
+      padding-bottom: 25px;
+    }
+    ul {
+      list-style: none;
+      li {
+        padding-top: 25px;
+        display: flex;
+        align-items: center;
+        a {
+          margin-left: 10px;
+          text-decoration: none;
+          font-size: 18px;
+          color: #000;
+        }
+      }
+    }
+  }
+  .maincontent {
+    position: relative;
+    background-color: #f1f1f1be;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    margin-left: 20%;
+    padding: 20px;
+    .homepage {
+      .card {
+        width: 500px;
+        height: 600px;
+        overflow: hidden;
+        background-color: #fff;
+        border: 1px solid #cecece;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        position: relative;
+        .card-header {
+          padding: 10px;
+        }
+        img {
+          width: 500px;
+        }
+        .card-content {
+          padding: 10px;
+          h4 {
+            margin-bottom: 10px;
+          }
+          small {
+            text-align: justify;
+          }
+          span {
+            color: #cecece;
+            font-size: 14px;
+            display: block;
+            margin: 10px 0;
+          }
+        }
+        .card-footer {
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          height: 50px;
+          padding: 0 10px;
+          border-top: 1px solid#cecece;
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          .delete,
+          .detail {
+            width: 30px;
+            height: 30px;
+            border: none;
+            padding: 5px;
+            color: #fff;
+            font-size: 20px;
+            border-radius: 3px;
+          }
+          .detail {
+            background-color: #4649ff;
+          }
+          .delete {
+            background-color: red;
+            margin-right: 10px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    .create-post {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      .card {
+        position: relative;
+        width: 600px;
+        height: 600px;
+        background-color: #fff;
+        border: 1px solid #cecece;
+        border-radius: 5px;
+        .card-header {
+          text-align: center;
+          height: 50px;
+          line-height: 50px;
+          border-bottom: 1px solid #cecece;
+        }
+        .card-content {
+          display: flex;
+          padding: 50px;
+          flex-direction: column;
+          input[type="text"] {
+            height: 40px;
+            border: none;
+            font-size: 16px;
+            border-bottom: 2px solid #000;
+            margin-bottom: 10px;
+            transition: 0.2s;
+            &:focus {
+              outline: none;
+              border: none;
+              border-bottom: 2px solid #4649ff;
+            }
+          }
+          label.des {
+            margin-bottom: 10px;
+          }
+          textarea,
+          input[type="file"] {
+            margin-bottom: 10px;
+          }
+          textarea {
+            resize: none;
+            transition: 0.4s;
+            &:focus {
+              outline: none;
+              border: 2px solid #4649ff;
+            }
+          }
+          button {
+            width: 200px;
+            height: 30px;
+            margin: 30px auto;
+            background-color: #4649ff;
+            outline: none;
+            border: none;
+            font-weight: bold;
+            color: #fff;
+            border-radius: 5px;
+          }
+        }
+      }
+    }
+    .detail-card {
+      height: max-content;
+      .card {
+        width: 640px;
+        background-color: #fff;
+        border: 1px solid #cecece;
+        border-radius: 5px;
+        position: relative;
+        overflow: hidden;
+        .card-header {
+          text-align: center;
+          padding: 10px;
+        }
+
+        img {
+          margin-bottom: 10px;
+        }
+        p,
+        h4 {
+          padding: 10px;
+          width: 100%;
+        }
+        .card-content {
+          position: relative;
+        }
+        .card-footer {
+          bottom: 0;
+          height: 50px;
+          width: 100%;
+          border-top: 1px solid #cecece;
+          padding: 0 10px;
+          line-height: 50px;
+          text-align: right;
+        }
+      }
+    }
+  }
+}
